@@ -24,6 +24,8 @@ export default defineConfig([
     },
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      // Los contextos exportan Provider + hook en el mismo archivo: es el patrón habitual
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     },
   },
 ])
